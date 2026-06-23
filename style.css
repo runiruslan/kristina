@@ -307,9 +307,9 @@ textarea {
 
 .theme-toggle-home {
   position: absolute;
-  top: 104px;
+  top: 31px;
   right: clamp(18px, 2.2vw, 36px);
-  z-index: 4;
+  z-index: 1100;
 }
 
 .theme-toggle-nav {
