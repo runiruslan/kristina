@@ -20,16 +20,39 @@ const formStatus = document.querySelector("#form-status");
 const heroSlides = document.querySelectorAll(".hero-bg");
 const themeSwitches = document.querySelectorAll(".theme-switch-input");
 const themeStorageKey = "kristina-color-theme";
+const reduceMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 document.body.classList.add("js-ready");
 
-function setTheme(isGalleryTheme) {
+function applyTheme(isGalleryTheme) {
   document.documentElement.dataset.theme = isGalleryTheme ? "gallery" : "warm";
   document.documentElement.style.colorScheme = isGalleryTheme ? "dark" : "light";
   document.body.classList.toggle("theme-gallery", isGalleryTheme);
   themeSwitches.forEach((themeSwitch) => {
     themeSwitch.checked = isGalleryTheme;
   });
+}
+
+function setTheme(isGalleryTheme, shouldAnimate = false) {
+  if (!shouldAnimate || reduceMotionQuery.matches) {
+    applyTheme(isGalleryTheme);
+    return;
+  }
+
+  document.body.classList.add("theme-transitioning");
+
+  if (document.startViewTransition) {
+    const transition = document.startViewTransition(() => applyTheme(isGalleryTheme));
+    transition.finished.finally(() => {
+      document.body.classList.remove("theme-transitioning");
+    });
+    return;
+  }
+
+  applyTheme(isGalleryTheme);
+  window.setTimeout(() => {
+    document.body.classList.remove("theme-transitioning");
+  }, 1250);
 }
 
 function saveTheme(isGalleryTheme) {
@@ -48,7 +71,7 @@ try {
 
 themeSwitches.forEach((themeSwitch) => {
   themeSwitch.addEventListener("change", () => {
-    setTheme(themeSwitch.checked);
+    setTheme(themeSwitch.checked, true);
     saveTheme(themeSwitch.checked);
   });
 });

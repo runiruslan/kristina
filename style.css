@@ -346,7 +346,12 @@ textarea {
     0 1px 2px rgba(255, 255, 255, 0.42),
     0 8px 16px rgba(0, 0, 0, 0.18);
   cursor: pointer;
-  transition: background 200ms ease-out, box-shadow 200ms ease-out, transform 200ms ease-out;
+  transition:
+    background 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 900ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .switch::before {
@@ -367,7 +372,11 @@ textarea {
     8px 10px 12px -8px rgba(0, 0, 0, 0.5);
   content: "";
   pointer-events: none;
-  transition: background 220ms ease-out, box-shadow 220ms ease-out, transform 220ms ease-out;
+  transition:
+    background 980ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 980ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 980ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 980ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .switch::after {
@@ -386,7 +395,10 @@ textarea {
     0 1px 1px rgba(255, 255, 255, 0.78),
     0 -1px 1px rgba(0, 0, 0, 0.34);
   content: "";
-  transition: background 220ms ease-out, box-shadow 220ms ease-out;
+  transition:
+    background 980ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 980ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 980ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .theme-switch-input:focus-visible + .switch {
@@ -413,6 +425,7 @@ textarea {
     inset 0 -1px 1px rgba(0, 0, 0, 0.38),
     0 1px 2px rgba(0, 0, 0, 0.5),
     8px 10px 12px -8px rgba(0, 0, 0, 0.64);
+  transform: translateX(-5px) scaleX(0.96);
 }
 
 .theme-switch-input:checked + .switch::after {
@@ -421,10 +434,63 @@ textarea {
     inset 0 -1px 3px rgba(0, 0, 0, 0.54),
     inset 0 1px 1px rgba(255, 255, 255, 0.46),
     0 0 10px rgba(215, 166, 74, 0.78);
+  transform: scale(1.14);
 }
 
 .switch:hover {
   transform: translateY(-2px);
+}
+
+.switch:active {
+  transform: translateY(0) scale(0.98);
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 1250ms;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  animation-name: themeViewOut;
+}
+
+::view-transition-new(root) {
+  animation-name: themeViewIn;
+}
+
+@keyframes themeViewOut {
+  from {
+    filter: blur(0);
+    opacity: 1;
+  }
+
+  to {
+    filter: blur(3px);
+    opacity: 0;
+  }
+}
+
+@keyframes themeViewIn {
+  from {
+    filter: blur(3px);
+    opacity: 0;
+  }
+
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+body.theme-transitioning,
+body.theme-transitioning * ,
+body.theme-transitioning *::before,
+body.theme-transitioning *::after {
+  transition-duration: 1250ms !important;
+  transition-property: background, background-color, border-color, box-shadow, color, filter, opacity, outline-color, text-shadow !important;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important;
 }
 
 .hero {
