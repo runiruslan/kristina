@@ -24,6 +24,8 @@ const themeStorageKey = "kristina-color-theme";
 document.body.classList.add("js-ready");
 
 function setTheme(isGalleryTheme) {
+  document.documentElement.dataset.theme = isGalleryTheme ? "gallery" : "warm";
+  document.documentElement.style.colorScheme = isGalleryTheme ? "dark" : "light";
   document.body.classList.toggle("theme-gallery", isGalleryTheme);
   themeSwitches.forEach((themeSwitch) => {
     themeSwitch.checked = isGalleryTheme;
