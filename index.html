@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Портфолио интерьерного дизайнера Кристины: квартиры, дома, отдельные комнаты и 3D-визуализации в стиле quiet luxury и warm contemporary.">
+  <title>Kristina | Interior Design Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <a class="brand" href="#home" aria-label="Kristina home">
+      <span class="brand-symbol">K</span>
+      <span>Kristina</span>
+    </a>
+
+    <nav class="nav" id="main-nav" aria-label="Основная навигация">
+      <a class="nav-link active" href="#home">Главная</a>
+      <a class="nav-link" href="#works">Работы</a>
+      <a class="nav-link" href="#atelier">Подход</a>
+      <a class="nav-link" href="#contact">Контакт</a>
+    </nav>
+
+    <a class="header-action" href="#contact">Консультация</a>
+
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-label="Портфолио интерьерного дизайнера Кристины">
+      <div class="hero-background" aria-hidden="true">
+        <div class="hero-bg hero-bg-living active"></div>
+        <div class="hero-bg hero-bg-kitchen"></div>
+        <div class="hero-bg hero-bg-bedroom"></div>
+      </div>
+
+      <div class="hero-content reveal">
+        <span class="eyebrow">Interior design portfolio</span>
+        <h1>Интерьеры, в которых тишина выглядит дорого.</h1>
+        <p>Я создаю частные пространства для квартир и домов: с мягким светом, натуральными фактурами, продуманной планировкой и спокойной премиальной эстетикой.</p>
+        <div class="hero-actions">
+          <a class="hero-work-button" href="#works" aria-label="Смотреть работы">
+            <span class="hero-work-arrow" aria-hidden="true"></span>
+            <span class="hero-work-text">Смотреть работы</span>
+          </a>
+          <a class="learn-more" href="#contact" aria-label="Обсудить проект">
+            <span class="circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">Обсудить проект</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-caption reveal" aria-label="Направления портфолио">
+        <span>Квартиры / дома / 3D</span>
+        <strong>Private interiors</strong>
+      </div>
+    </section>
+
+    <section class="statement section" id="statement">
+      <div class="section-kicker reveal">Kristina interiors</div>
+      <div class="split-heading reveal">
+        <h2>Портфолио построено как галерея: крупный кадр, воздух, материал и ощущение масштаба.</h2>
+        <p>Фокус на работах: цельные квартиры, дома, отдельные комнаты и визуализации, где каждая сцена показывает свет, пропорции, мебель и характер будущего пространства.</p>
+      </div>
+
+      <div class="principles-grid">
+        <article class="principle reveal">
+          <span>01</span>
+          <h3>Свет</h3>
+          <p>Мягкие сценарии, которые делают интерьер глубоким и живым.</p>
+        </article>
+        <article class="principle reveal">
+          <span>02</span>
+          <h3>Материалы</h3>
+          <p>Камень, дерево, лен, металл и спокойные фактуры без визуального шума.</p>
+        </article>
+        <article class="principle reveal">
+          <span>03</span>
+          <h3>Планировка</h3>
+          <p>Пространство собирается вокруг ежедневных сценариев семьи.</p>
+        </article>
+        <article class="principle reveal">
+          <span>04</span>
+          <h3>Детали</h3>
+          <p>Акценты появляются точечно: так интерьер выглядит дороже и дольше остается актуальным.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="works section" id="works">
+      <div class="section-kicker reveal">Selected works</div>
+      <div class="works-top reveal">
+        <h2>Большая галерея интерьерных работ.</h2>
+        <div class="filter-group" aria-label="Фильтры портфолио">
+          <button class="filter-button active" type="button" data-filter="all">Все</button>
+          <button class="filter-button" type="button" data-filter="apartments">Квартиры</button>
+          <button class="filter-button" type="button" data-filter="houses">Дома</button>
+          <button class="filter-button" type="button" data-filter="rooms">Комнаты</button>
+          <button class="filter-button" type="button" data-filter="renders">3D</button>
+        </div>
+      </div>
+
+      <div class="portfolio-grid">
+        <article class="work-card lead reveal" tabindex="0" data-filter="apartments" data-visual="photo-living" data-title="Ivory Residence" data-category="Квартира / гостиная" data-details="Москва · 86 м² · quiet luxury" data-description="Светлая гостиная с мягкой геометрией, низкой мебелью, теплым деревом и графитовыми акцентами. Проект показывает, как нейтральная палитра может выглядеть насыщенно за счет фактур и пропорций.">
+          <div class="work-photo photo-living" aria-hidden="true"></div>
+          <div class="work-meta">
+            <span>Квартира / гостиная</span>
+            <h3>Ivory Residence</h3>
+            <p>Москва · 86 м²</p>
+          </div>
+        </article>
+
+        <article class="work-card reveal" tabindex="0" data-filter="apartments" data-visual="photo-kitchen" data-title="Oakline Kitchen" data-category="Квартира / кухня" data-details="Санкт-Петербург · 54 м² · warm contemporary" data-description="Кухня-столовая с островом из камня, латунной сантехникой и теплой подсветкой. Кадр работает как демонстрация материалов, ритма фасадов и спокойной функциональности.">
+          <div class="work-photo photo-kitchen" aria-hidden="true"></div>
+          <div class="work-meta">
+            <span>Квартира / кухня</span>
+            <h3>Oakline Kitchen</h3>
+            <p>Санкт-Петербург · 54 м²</p>
+          </div>
+        </article>
+
+        <article class="work-card reveal" tabindex="0" data-filter="houses" data-visual="photo-bedroom" data-title="Warm House Suite" data-category="Дом / спальня" data-details="Загородный дом · 120 м² · private suite" data-description="Спальня в частном доме с мягкой стеновой отделкой, текстилем натуральных оттенков и скрытым светом. Сцена сделана тихой, камерной и очень тактильной.">
+          <div class="work-photo photo-bedroom" aria-hidden="true"></div>
+          <div class="work-meta">
+            <span>Дом / спальня</span>
+            <h3>Warm House Suite</h3>
+            <p>Загородный дом · 120 м²</p>
+          </div>
+        </article>
+
+        <article class="work-card wide reveal" tabindex="0" data-filter="rooms" data-visual="photo-bath" data-title="Travertine Bath" data-category="Отдельная комната / ванная" data-details="Квартира · 11 м² · stone bathroom" data-description="Ванная комната с травертином, длинной каменной столешницей, латунными деталями и вертикальным светом. Акцент на гостиничное ощущение, но без лишней декоративности.">
+          <div class="work-photo photo-bath" aria-hidden="true"></div>
+          <div class="work-meta">
+            <span>Отдельная комната / ванная</span>
+            <h3>Travertine Bath</h3>
+            <p>11 м² · камень и латунь</p>
+          </div>
+        </article>
+
+        <article class="work-card reveal" tabindex="0" data-filter="rooms" data-visual="photo-dining" data-title="Soft Stone Dining" data-category="Отдельная комната / столовая" data-details="Дом · 22 м² · dining room" data-description="Столовая с крупным подвесом, мягкими креслами и светлой стеновой композицией. В проекте важны симметрия, тишина и ощущение долгих семейных ужинов.">
+          <div class="work-photo photo-dining" aria-hidden="true"></div>
+          <div class="work-meta">
+            <span>Комната / столовая</span>
+            <h3>Soft Stone Dining</h3>
+            <p>Дом · 22 м²</p>
+          </div>
+        </article>
+
+        <article class="work-card tall reveal" tabindex="0" data-filter="renders" data-visual="photo-lounge" data-title="Lounge 3D Concept" data-category="3D-визуализация / lounge" data-details="Концепт · визуализация · lounge zone" data-description="Минималистичная lounge-зона с округлой мебелью, мягкими плоскостями и теплой подсветкой. Подходит как демонстрация настроения будущего интерьера до реализации.">
+          <div class="work-photo photo-lounge" aria-hidden="true"></div>
+          <div class="work-meta">
+            <span>3D-визуализация</span>
+            <h3>Lounge 3D Concept</h3>
+            <p>Концепт · lounge zone</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="atelier section" id="atelier">
+      <div class="section-kicker reveal">Approach</div>
+      <div class="atelier-layout">
+        <div class="atelier-copy reveal">
+          <h2>Дизайн начинается с ощущения дома, а не с набора красивых предметов.</h2>
+          <p>В моей работе важны планировка, сценарии света, натуральные материалы и спокойная композиция. Поэтому визуализации выглядят как будущая жизнь, а не как случайная подборка мебели.</p>
+        </div>
+
+        <div class="atelier-list reveal" aria-label="Форматы работы">
+          <div>
+            <span>01</span>
+            <strong>Планировочная концепция</strong>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>3D-визуализации</strong>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Подбор материалов и мебели</strong>
+          </div>
+          <div>
+            <span>04</span>
+            <strong>Сопровождение реализации</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-inner reveal">
+        <div class="contact-copy">
+          <span class="section-kicker">Contact</span>
+          <h2>Обсудить будущий интерьер.</h2>
+          <p>Оставьте короткое сообщение о квартире, доме или отдельной комнате. Я вернусь к вам с форматом консультации и следующим шагом.</p>
+          <div class="contact-links">
+            <a href="mailto:hello@kristina-interiors.com">hello@kristina-interiors.com</a>
+            <a href="tel:+79990000000">+7 999 000-00-00</a>
+            <div>
+              <a href="#">Instagram</a>
+              <a href="#">WhatsApp</a>
+              <a href="#">Telegram</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Ваше имя" autocomplete="name">
+            <small class="field-error" data-error-for="name"></small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email или телефон</label>
+            <input id="email" name="email" type="text" placeholder="Как с вами связаться" autocomplete="email">
+            <small class="field-error" data-error-for="email"></small>
+          </div>
+
+          <div class="field">
+            <label for="message">Проект</label>
+            <textarea id="message" name="message" rows="5" placeholder="Квартира, дом, комната, площадь и желаемый стиль"></textarea>
+            <small class="field-error" data-error-for="message"></small>
+          </div>
+
+          <button class="send-request-button" type="submit">
+            <span class="send-request-label">Отправить запрос</span>
+            <span class="send-corner send-corner-left" aria-hidden="true"></span>
+            <span class="send-corner send-corner-right" aria-hidden="true"></span>
+          </button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#home" aria-label="Вернуться наверх">
+      <span class="brand-symbol">K</span>
+      <span>Kristina</span>
+    </a>
+    <p>&copy; 2026 Kristina. Interior designer.</p>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">WhatsApp</a>
+      <a href="#">Telegram</a>
+    </div>
+  </footer>
+
+  <div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel">
+      <button class="modal-close" type="button" data-close-modal aria-label="Закрыть проект">Закрыть</button>
+      <div class="modal-visual work-photo" id="modal-visual" aria-hidden="true"></div>
+      <div class="modal-copy">
+        <span id="modal-category">Квартира</span>
+        <h2 id="modal-title">Название проекта</h2>
+        <strong id="modal-details">Город · площадь · стиль</strong>
+        <p id="modal-description">Описание проекта.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
