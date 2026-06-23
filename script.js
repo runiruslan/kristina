@@ -18,8 +18,38 @@ const modalCloseItems = document.querySelectorAll("[data-close-modal]");
 const contactForm = document.querySelector("#contact-form");
 const formStatus = document.querySelector("#form-status");
 const heroSlides = document.querySelectorAll(".hero-bg");
+const themeSwitches = document.querySelectorAll(".theme-switch-input");
+const themeStorageKey = "kristina-color-theme";
 
 document.body.classList.add("js-ready");
+
+function setTheme(isGalleryTheme) {
+  document.body.classList.toggle("theme-gallery", isGalleryTheme);
+  themeSwitches.forEach((themeSwitch) => {
+    themeSwitch.checked = isGalleryTheme;
+  });
+}
+
+function saveTheme(isGalleryTheme) {
+  try {
+    localStorage.setItem(themeStorageKey, isGalleryTheme ? "gallery" : "warm");
+  } catch (error) {
+    return;
+  }
+}
+
+try {
+  setTheme(localStorage.getItem(themeStorageKey) === "gallery");
+} catch (error) {
+  setTheme(false);
+}
+
+themeSwitches.forEach((themeSwitch) => {
+  themeSwitch.addEventListener("change", () => {
+    setTheme(themeSwitch.checked);
+    saveTheme(themeSwitch.checked);
+  });
+});
 
 function startHeroSlider() {
   if (heroSlides.length < 2 || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
