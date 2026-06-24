@@ -68,7 +68,10 @@ function startHeroSlider() {
 startHeroSlider();
 
 function updateHeader() {
-  header.classList.toggle("scrolled", window.scrollY > 16);
+  const isScrolled = window.scrollY > 16;
+
+  header.classList.toggle("scrolled", isScrolled);
+  document.body.classList.toggle("header-scrolled", isScrolled);
 }
 
 function closeMenu() {
