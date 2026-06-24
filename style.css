@@ -360,13 +360,13 @@ textarea {
   border-top-color: rgba(248, 252, 252, 0.78);
   border-radius: 4px;
   background:
-    linear-gradient(90deg, #cad4d6 0%, #d5dee0 42%, #fff8ef 56%, #ccd6d8 100%);
+    linear-gradient(90deg, #cad4d6 0%, #d5dee0 62%, #fff8ef 76%, #ccd6d8 100%);
   box-shadow:
     inset 0 2px 1px rgba(255, 255, 255, 0.72),
     inset 0 -2px 2px rgba(0, 0, 0, 0.34),
     0 0 0 1px rgba(80, 94, 98, 0.34),
-    0 4px 4px rgba(0, 0, 0, 0.48),
-    0 11px 16px -9px rgba(0, 0, 0, 0.62);
+    3px 4px 4px rgba(0, 0, 0, 0.48),
+    8px 11px 16px -9px rgba(0, 0, 0, 0.62);
   content: "";
   pointer-events: none;
 }
@@ -415,13 +415,13 @@ textarea {
   border-color: rgba(8, 11, 10, 0.92);
   border-top-color: rgba(133, 149, 143, 0.42);
   background:
-    linear-gradient(90deg, #101410 0%, #172018 46%, #d7a64a 53%, #6f5c25 57%, #263127 66%, #151d17 100%);
+    linear-gradient(90deg, #101410 0%, #172018 25%, #d7a64a 34%, #6f5c25 39%, #263127 52%, #151d17 100%);
   box-shadow:
     inset 0 2px 1px rgba(255, 255, 255, 0.12),
     inset 0 -2px 2px rgba(0, 0, 0, 0.62),
     0 0 0 1px rgba(0, 0, 0, 0.44),
-    0 4px 4px rgba(0, 0, 0, 0.62),
-    0 12px 17px -9px rgba(0, 0, 0, 0.78);
+    -3px 4px 4px rgba(0, 0, 0, 0.62),
+    -8px 12px 17px -9px rgba(0, 0, 0, 0.78);
 }
 
 .theme-switch-input:checked + .switch::after {
