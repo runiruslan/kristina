@@ -78,7 +78,7 @@ function closeMenu() {
   nav.classList.remove("open");
   menuToggle.classList.remove("active");
   menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", "Открыть меню");
+  menuToggle.setAttribute("aria-label", "Open menu");
   document.body.classList.remove("menu-open");
 }
 
@@ -86,7 +86,7 @@ function toggleMenu() {
   const isOpen = nav.classList.toggle("open");
   menuToggle.classList.toggle("active", isOpen);
   menuToggle.setAttribute("aria-expanded", String(isOpen));
-  menuToggle.setAttribute("aria-label", isOpen ? "Закрыть меню" : "Открыть меню");
+  menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   document.body.classList.toggle("menu-open", isOpen);
 }
 
@@ -195,21 +195,21 @@ contactForm.addEventListener("submit", (event) => {
   formStatus.textContent = "";
 
   if (name.value.trim().length < 2) {
-    setError(name, "Укажите имя.");
+    setError(name, "Enter your name.");
     isValid = false;
   } else {
     setError(name, "");
   }
 
   if (!hasContact(email.value)) {
-    setError(email, "Оставьте email или телефон.");
+    setError(email, "Leave an email or phone.");
     isValid = false;
   } else {
     setError(email, "");
   }
 
   if (message.value.trim().length < 10) {
-    setError(message, "Добавьте несколько деталей о проекте.");
+    setError(message, "Add a few details about the project.");
     isValid = false;
   } else {
     setError(message, "");
@@ -217,6 +217,6 @@ contactForm.addEventListener("submit", (event) => {
 
   if (!isValid) return;
 
-  formStatus.textContent = "Спасибо. Запрос подготовлен к отправке.";
+  formStatus.textContent = "Thank you. The request is prepared for sending.";
   contactForm.reset();
 });
